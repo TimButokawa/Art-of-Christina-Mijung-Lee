@@ -5,3 +5,4 @@ bower_components/
 dist/
 images/
 *.php
+.DS_Store
