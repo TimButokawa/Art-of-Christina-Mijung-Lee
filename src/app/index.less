@@ -1,2 +1,24 @@
 // common styles
 // global styles
+@black: #4d4d4d;
+@white: #fefefe;
+@grey: lighten(@black, 30);
+
+body {
+    min-width: 320px;
+}
+
+// main view
+.main-container {
+    @media(min-width: 678px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &.sidebar-offset {
+        margin-top: 75px;
+        @media(min-width: 678px) {
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+    }
+}
