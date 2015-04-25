@@ -12,7 +12,10 @@ nav {
     h2.title {
         display: block;
         margin-top: 10px;
-        span.mobile-trigger { float: right; }
+        span {
+            cursor: pointer;
+            &.mobile-trigger { float: right; }
+        }
     }
     @media(min-width: 678px) {
         h2.title { display: none; }
@@ -24,9 +27,9 @@ nav {
     .link-container {
         width: 100%;
         height: 100%;
-        display: table;
+        display: none;
+        @media(min-width: 678px) { display: table !important; }
         ul {
-            display: block;
             padding: 0;
             margin: 0;
             list-style-type: none;

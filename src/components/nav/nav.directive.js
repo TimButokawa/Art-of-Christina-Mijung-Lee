@@ -12,7 +12,18 @@
         return directive;
     }
 
-    function NavBarController() {
-        // TODO: controller
+    function NavBarController($rootScope, $window) {
+        var $trigger = angular.element('span.mobile-trigger');
+        var $links = angular.element('.link-container');
+        var $viewport = angular.element($window);
+        $trigger.on('click', function() {
+            $links.slideToggle();
+        });
+
+        $rootScope.$on('$stateChangeSuccess', function() {
+            if($links.is(':visible') && $viewport.width() < 678) {
+                $links.slideToggle();
+            }
+        });
     }
 })();
