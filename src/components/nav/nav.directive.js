@@ -16,6 +16,7 @@
         var $trigger = angular.element('span.mobile-trigger');
         var $links = angular.element('.link-container');
         var $viewport = angular.element($window);
+
         $trigger.on('click', function() {
             $links.slideToggle();
         });
