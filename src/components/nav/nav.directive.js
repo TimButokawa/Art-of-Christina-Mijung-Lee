@@ -12,6 +12,8 @@
         return directive;
     }
 
+    NavBarController.$inject = ['$rootScope', '$window'];
+
     function NavBarController($rootScope, $window) {
         var $trigger = angular.element('span.mobile-trigger');
         var $links = angular.element('.link-container');
