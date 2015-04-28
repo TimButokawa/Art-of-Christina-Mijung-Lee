@@ -21,9 +21,6 @@
     }
 
     function ImageGalleryController() {
-        var vm = this;
-        vm.foo = 'bar';
-
         angular.element('.swipebox').swipebox();
     }
 })();
