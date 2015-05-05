@@ -1,1 +1,16 @@
-<h2>wall</h2>
+<div class="gallery">
+    <!-- TODO: align titles to gallery thumbs -->
+    <h3>Wall</h3>
+    <div class="gallery-images">
+        <div ng-repeat="image in wall.images">
+            <span
+                image-gallery
+                class="gallery-image"
+                gallery-name="{{ image.galleryName }}"
+                image-title="{{ image.imageTitle }}"
+                full-image="assets/images/full/{{ image.fullImage }}"
+                thumb-image="assets/images/thumb/{{ image.thumbImage }}"
+                alt-text="{{ image.altText }}"></span>
+        </div>
+    </div>
+</div>

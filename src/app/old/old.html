@@ -4,13 +4,15 @@
     <h4>2012-2013</h4>
     <!-- TODO: tabs for different years -->
     <div class="gallery-images">
-        <span
-            image-gallery
-            class="old-gallery-image"
-            gallery-name="old-gallery"
-            image-title="bad influence"
-            full-image="assets/images/old/full/5_badinfluence.jpg"
-            thumb-image="assets/images/old/thumb/badinfluence.jpg"
-            alt-text="painting by Christina M. Lee - Bad Influence"></span>
+        <div ng-repeat="image in old.images">
+            <span
+                image-gallery
+                class="gallery-image"
+                gallery-name="{{ image.galleryName }}"
+                image-title="{{ image.imageTitle }}"
+                full-image="assets/images/old/full/{{ image.fullImage }}"
+                thumb-image="assets/images/old/thumb/{{ image.thumbImage }}"
+                alt-text="{{ image.altText }}"></span>
+        </div>
     </div>
 </div>
