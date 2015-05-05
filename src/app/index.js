@@ -23,15 +23,33 @@
             })
             .state('paper', {
                 url: '/paper',
-                templateUrl: 'app/paper/paper.html'
+                templateUrl: 'app/paper/paper.html',
+                controller: 'Paper as paper',
+                resolve: {
+                    paperImages: function(imageService) {
+                        return imageService.getPaperImages();
+                    }
+                }
             })
             .state('wall', {
                 url: '/wall',
-                templateUrl: 'app/wall/wall.html'
+                templateUrl: 'app/wall/wall.html',
+                controller: 'Wall as wall',
+                resolve: {
+                    wallImages: function(imageService) {
+                        return imageService.getWallImages();
+                    }
+                }
             })
             .state('old', {
                 url: '/old',
-                templateUrl: 'app/old/old.html'
+                templateUrl: 'app/old/old.html',
+                controller: 'OlderWork as old',
+                resolve: {
+                    oldImages: function(imageService) {
+                        return imageService.getOlderImages();
+                    }
+                }
             })
             ;
 
