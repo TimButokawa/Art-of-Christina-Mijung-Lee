@@ -12,13 +12,25 @@ body {
 .main-container {
     @media(min-width: 678px) {
         padding-left: 15px;
-        padding-right: 15px;
     }
     &.sidebar-offset {
         margin-top: 75px;
         @media(min-width: 678px) {
             margin-left: 250px;
             margin-top: 20px;
+        }
+    }
+    .statement,
+    .contact,
+    .cv {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    .cv {
+        ul {
+            list-style-type: none;
+            padding: 0;
+            li span { font-weight: bold; }
         }
     }
 }
