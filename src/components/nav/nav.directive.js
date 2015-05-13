@@ -24,7 +24,7 @@
         });
 
         $rootScope.$on('$stateChangeSuccess', function() {
-            if($links.is(':visible') && $viewport.width() < 678) {
+            if($links.is(':visible') && $viewport.width() <= 678 || $viewport.height() <= 450) {
                 $links.slideToggle();
             }
         });
