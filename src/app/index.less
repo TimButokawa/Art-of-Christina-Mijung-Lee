@@ -8,14 +8,20 @@ body {
     min-width: 320px;
 }
 
+a {
+    &:visited,
+    &:focus,
+    &:active { text-decoration: none; }
+}
+
 // main view
 .main-container {
-    @media(min-width: 678px) {
+    @media (min-height: 450px) and (min-width: 678px) {
         padding-left: 15px;
     }
     &.sidebar-offset {
         margin-top: 75px;
-        @media(min-width: 678px) {
+        @media (min-height: 450px) and (min-width: 678px) {
             margin-left: 250px;
             margin-top: 20px;
         }
