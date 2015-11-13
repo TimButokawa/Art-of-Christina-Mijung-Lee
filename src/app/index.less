@@ -3,7 +3,42 @@
 @black: #4d4d4d;
 @white: #fefefe;
 @grey: lighten(@black, 30);
+@featureImageMaxWidth: 571px;
 
+// fancybox overrides
+
+// TODO: names, cleanup
+.fancybox-skin {
+    .fancybox-nav {
+        width: 40px;
+    }
+    .fancybox-nav span {
+        visibility: visible;
+        opacity: 0.5;
+    }
+    .fancybox-nav:hover span {
+        opacity: 1;
+    }
+    .fancybox-nav {
+        &.fancybox-next {
+            right: -70px;
+        }
+        &.fancybox-prev {
+            left: -70px;
+        }
+    }
+    #toggle-zoom {
+        cursor: pointer;
+        &:after {
+            content: 'zoom';
+            padding-left: 10px;
+        }
+        &.zoom-status:after { content: 'exit'; }
+    }
+    img.zoomImg { cursor: crosshair; }
+}
+
+// global
 body {
     min-width: 320px;
 }
@@ -40,7 +75,7 @@ a {
         }
     }
     .feature-image {
-        max-width: 650px;
+        max-width: @featureImageMaxWidth;
         margin: 0 auto;
     }
 }
