@@ -17,7 +17,6 @@ module.exports = function(options) {
 
     var injectFiles = gulp.src([
       options.src + '/{app,components}/**/*.less',
-      '!' + options.src + '/app/index.less',
       '!' + options.src + '/app/vendor.less'
     ], { read: false });
 

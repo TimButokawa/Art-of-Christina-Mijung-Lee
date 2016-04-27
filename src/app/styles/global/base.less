@@ -1,0 +1,71 @@
+body {
+    min-width: 320px;
+}
+
+a {
+    &:visited,
+    &:focus,
+    &:active { text-decoration: none; }
+}
+
+// fancybox overrides
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+    background-image: url('../assets/images/fancy/fancybox_sprite.png');
+}
+
+#fancybox-loading div {
+    background: url('../assets/images/fancy/fancybox_loading.gif') center center no-repeat;
+}
+
+.fancybox-nav {
+    background: transparent url('../assets/images/fancy/blank.gif'); /* helps IE */
+}
+
+.fancybox-overlay {
+    background: url('../assets/images/fancy/fancybox_overlay.png');
+}
+
+// fancybox retina
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5){
+
+    #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+        background-image: url('../assets/images/fancy/fancybox_sprite@2x.png');
+    }
+
+    #fancybox-loading div {
+        background-image: url('../assets/images/fancy/fancybox_loading@2x.gif');
+    }
+}
+
+// lightbox
+.fancybox-skin {
+    .fancybox-nav {
+        width: 40px;
+    }
+    .fancybox-nav span {
+        visibility: visible;
+        opacity: 0.5;
+    }
+    .fancybox-nav:hover span {
+        opacity: 1;
+    }
+    .fancybox-nav {
+        &.fancybox-next {
+            right: -70px;
+        }
+        &.fancybox-prev {
+            left: -70px;
+        }
+    }
+    #toggle-zoom {
+        cursor: pointer;
+        &:after {
+            content: 'zoom';
+            padding-left: 10px;
+        }
+        &.zoom-status:after { content: 'exit'; }
+    }
+    img.zoomImg { cursor: crosshair; }
+}

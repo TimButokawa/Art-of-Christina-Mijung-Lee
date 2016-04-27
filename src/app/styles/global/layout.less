@@ -1,0 +1,32 @@
+.vertical-align-container {
+    display: table;
+    width: 100%;
+}
+
+.vertical-align-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.main-container {
+    @media (min-height: 450px) and (min-width: 678px) {
+        padding-left: 15px;
+    }
+    &.sidebar-offset {
+        margin-top: 75px;
+        @media (min-height: 450px) and (min-width: 678px) {
+            margin-left: 250px;
+            margin-top: 20px;
+        }
+    }
+}
+
+.main-container-max-width {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.feature-image {
+    max-width: @featureImageMaxWidth;
+    margin: 0 auto;
+}
