@@ -17,7 +17,7 @@ module.exports = function(options) {
 
     var injectFiles = gulp.src([
       options.src + '/{app,components}/**/*.less',
-      '!' + options.src + '/app/vendor.less'
+      '!' + options.src + '/app/index.less'
     ], { read: false });
 
     var injectOptions = {
@@ -34,8 +34,7 @@ module.exports = function(options) {
     var indexFilter = $.filter('index.less');
 
     return gulp.src([
-      options.src + '/app/index.less',
-      options.src + '/app/vendor.less'
+      options.src + '/app/index.less'
     ])
     .pipe(indexFilter)
     .pipe($.inject(injectFiles, injectOptions))
