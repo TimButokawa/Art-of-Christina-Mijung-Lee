@@ -12,7 +12,8 @@
                 fullImage: '@',
                 thumbImage: '@',
                 imageTitle: '@',
-                altText: '@'
+                altText: '@',
+                medium: '@'
             },
             controller: ImageGalleryController
         };
@@ -39,6 +40,7 @@
                 afterLoad: function() {
                     this.outer.prepend('<span id="toggle-zoom"><span class="glyphicon glyphicon-search"></span></span>');
                     this.inner.attr('id', 'zoom-target');
+                    this.title = _getImageTitle(this);
                 },
                 afterShow: function() {
                     angular.element('#toggle-zoom').on('click', function() {
@@ -48,6 +50,14 @@
                 }
             };
             angular.element('.fancybox').fancybox(options);
+        }
+
+        function _getImageTitle(galleryImage) {
+            var medium = angular.element(galleryImage.element).data('medium');
+            if(medium) {
+                return galleryImage.title + '<div class="text-lowercase first-letter-uppercase">' + medium + '</div>';
+            }
+            return galleryImage.title;
         }
 
         function _initZoom() {
