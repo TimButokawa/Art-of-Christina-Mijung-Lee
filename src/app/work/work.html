@@ -1,15 +1,15 @@
 <div class="gallery">
-    <h3>Drawings</h3>
+    <h3>Work</h3>
     <div class="gallery-images">
-        <div ng-repeat="image in paper.images | orderBy:'id':false">
+        <div ng-repeat="image in $ctrl.images | orderBy:'year':true">
             <span
                 image-gallery
                 class="gallery-image"
                 gallery-name="{{ image.galleryName }}"
                 image-title="{{ image.imageTitle }}"
                 medium="{{ image.medium }}"
-                full-image="assets/images/drawings/full/{{ image.fullImage }}"
-                thumb-image="assets/images/drawings/thumb/{{ image.thumbImage }}"
+                full-image="assets/images/work/full/{{ image.fullImage }}"
+                thumb-image="assets/images/work/thumb/{{ image.thumbImage }}"
                 alt-text="{{ image.altText }}"></span>
         </div>
     </div>

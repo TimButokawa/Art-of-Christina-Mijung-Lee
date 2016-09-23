@@ -6,8 +6,7 @@
     function imageService($http, $q) {
         var service = {
             getOlderImages: getOlderImages,
-            getPaperImages: getPaperImages,
-            getWallImages: getWallImages
+            getWorkImages: getWorkImages
         };
         return service;
 
@@ -19,17 +18,9 @@
             return deferred.promise;
         }
 
-        function getPaperImages() {
+        function getWorkImages() {
             var deferred = $q.defer();
-            $http.get('services/Paper/Get').success(function(data) {
-                deferred.resolve(data);
-            });
-            return deferred.promise;
-        }
-
-        function getWallImages() {
-            var deferred = $q.defer();
-            $http.get('services/Wall/Get').success(function(data) {
+            $http.get('services/Work/Get').success(function(data) {
                 deferred.resolve(data);
             });
             return deferred.promise;

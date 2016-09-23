@@ -33,9 +33,9 @@
                 nextClick: false,
                 margin: [20, 50, 20, 50],
                 helpers:  {
-                    title : {
-                        type : 'inside'
-                    },
+                    title: {
+                        type: 'inside'
+                    }
                 },
                 afterLoad: function() {
                     this.outer.prepend('<span id="toggle-zoom"><span class="glyphicon glyphicon-search"></span></span>');
